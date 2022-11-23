@@ -34,7 +34,7 @@ def print_header
   
   def print(names)
   names.each_with_index do |student, index|
-    if student[:name][0] == 'N'
+    if student[:name].length < 12
       puts "#{index} #{student[:name]} (#{student[:cohort]} cohort)"
     end
   end
