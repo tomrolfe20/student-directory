@@ -47,7 +47,11 @@ def print_header
   end
   
   def print_footer(names)
-      puts "Overall, we have #{names.count} great students" 
+    if names.count == 1 
+      puts "Overall, we have #{names.count} great student."
+    else 
+      puts "Overall, we have #{names.count} great students." 
+    end
   end
   
   print_header
