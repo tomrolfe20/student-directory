@@ -31,6 +31,7 @@ def input_students
   def print_footer(names)
     puts "Overall, we have #{names.count} great students"
   end
+
   
   
   students = input_students
