@@ -22,7 +22,7 @@ end
 students = [
 {name: "Dr. Hannibal Lecter", cohort: :november, hobbbies: :fishing},
 {name: "Darth Vader", cohort: :november, hobbbies: :fishing},
-{name: "Nurse Ratched", cohort: :november, hobbbies: :fishing},
+{name: "Nurse Ratched", cohort: :october, hobbbies: :fishing},
 {name: "Michael Corleone", cohort: :november},
 {name: "Alex DeLarge", cohort: :november},
 {name: "The Wicked Witch of the West", cohort: :november},
@@ -38,9 +38,9 @@ def print_header
     puts "-------------"
   end
   
-  def print(names)
+  def print(names, cohort)
   names.each_with_index do |student, index|
-    if student[:name].length < 12
+    if student[:cohort] == cohort
       puts "#{index} #{student[:name]} (#{student[:cohort]} cohort)"
     end
   end
@@ -50,7 +50,6 @@ def print_header
       puts "Overall, we have #{names.count} great students" 
   end
   
-  students = input_students
   print_header
-  print(students)
+  print(students, :october)
   print_footer(students)
